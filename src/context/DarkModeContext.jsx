@@ -7,8 +7,6 @@ function DarkModeProvider({ children }) {
   const [isDarkMode, setIsDarkMode] = useLocalStorageState(false, "isDarkMode");
   useEffect(
     function () {
-      console.log(document.documentElement.classList);
-
       if (isDarkMode) {
         document.documentElement.classList.add("dark-mode");
         document.documentElement.classList.remove("light-mode");
